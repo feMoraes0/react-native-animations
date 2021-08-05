@@ -3,10 +3,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const Home = () => {
+interface HomeProps {
+  navigation: any,
+}
+
+const Home = ({ navigation }: HomeProps) => {
+
+  const navigateTo = (pageName: string): void => {
+    navigation.navigate(pageName);
+  }
+
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity onPress={() => null} style={styles.button}>
+      <TouchableOpacity onPress={() => navigateTo('Airbnb')} style={styles.button}>
         <Text style={styles.text}>Test button</Text>
       </TouchableOpacity>
       <StatusBar style="auto" />
