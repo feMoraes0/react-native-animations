@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Navigator initialRouteName={Home.name} screenOptions={{ headerMode: 'none'}}>
+      <Navigator initialRouteName={Home.name} screenOptions={{ headerShown: false }}>
         <Screen name={Home.name} component={Home.component} />
       </Navigator>
     </NavigationContainer>
